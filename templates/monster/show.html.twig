@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Monster{% endblock %}
+
+{% block body %}
+    <h1>Monster</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ monster.id }}</td>
+            </tr>
+            <tr>
+                <th>MonsterName</th>
+                <td>{{ monster.monsterName }}</td>
+            </tr>
+            <tr>
+                <th>Stat_atk</th>
+                <td>{{ monster.statAtk }}</td>
+            </tr>
+            <tr>
+                <th>Stat_def</th>
+                <td>{{ monster.statDef }}</td>
+            </tr>
+            <tr>
+                <th>Stat_hp</th>
+                <td>{{ monster.statHp }}</td>
+            </tr>
+            <tr>
+                <th>Stat_atkspd</th>
+                <td>{{ monster.statAtkspd }}</td>
+            </tr>
+            <tr>
+                <th>Stat_critrate</th>
+                <td>{{ monster.statCritrate }}</td>
+            </tr>
+            <tr>
+                <th>Stat_critdmg</th>
+                <td>{{ monster.statCritdmg }}</td>
+            </tr>
+            <tr>
+                <th>Stat_accuracy</th>
+                <td>{{ monster.statAccuracy }}</td>
+            </tr>
+            <tr>
+                <th>Stat_res</th>
+                <td>{{ monster.statRes }}</td>
+            </tr>
+            <tr>
+                <th>Stat_prec</th>
+                <td>{{ monster.statPrec }}</td>
+            </tr>
+            <tr>
+                <th>Stat_evasion</th>
+                <td>{{ monster.statEvasion }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_monster_index') }}">back to list</a>
+
+    <a href="{{ path('app_monster_edit', {'id': monster.id}) }}">edit</a>
+
+    {{ include('monster/_delete_form.html.twig') }}
+{% endblock %}

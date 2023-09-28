@@ -72,4 +72,9 @@ class ClassMonster
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return $this->class; // Remplacer champ par une propriété "string" de l'entité
+    }
 }

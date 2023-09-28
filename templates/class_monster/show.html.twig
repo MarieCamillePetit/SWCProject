@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ClassMonster{% endblock %}
+
+{% block body %}
+    <h1>ClassMonster</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ class_monster.id }}</td>
+            </tr>
+            <tr>
+                <th>Class</th>
+                <td>{{ class_monster.class }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_class_monster_index') }}">back to list</a>
+
+    <a href="{{ path('app_class_monster_edit', {'id': class_monster.id}) }}">edit</a>
+
+    {{ include('class_monster/_delete_form.html.twig') }}
+{% endblock %}

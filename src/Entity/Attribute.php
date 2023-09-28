@@ -72,4 +72,9 @@ class Attribute
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return $this->attribut; // Remplacer champ par une propriété "string" de l'entité
+    }
 }
