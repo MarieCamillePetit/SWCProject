@@ -48,11 +48,11 @@ class Monster
 
     #[ORM\ManyToOne(inversedBy: 'monstersName')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?attribute $attribute = null;
+    private ?Attribute $attribute = null;
 
     #[ORM\ManyToOne(inversedBy: 'monsterName')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?classMonster $class = null;
+    private ?ClassMonster $class = null;
 
     public function getId(): ?int
     {
@@ -191,24 +191,24 @@ class Monster
         return $this;
     }
 
-    public function getAttribute(): ?attribute
+    public function getAttribute(): ?Attribute
     {
         return $this->attribute;
     }
 
-    public function setAttribute(?attribute $attribute): static
+    public function setAttribute(?Attribute $attribute): static
     {
         $this->attribute = $attribute;
 
         return $this;
     }
 
-    public function getClass(): ?classMonster
+    public function getClass(): ?ClassMonster
     {
         return $this->class;
     }
 
-    public function setClass(?classMonster $class): static
+    public function setClass(?ClassMonster $class): static
     {
         $this->class = $class;
 
